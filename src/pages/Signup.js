@@ -1,6 +1,7 @@
 import React from 'react';
 import { BContainer, Flex } from '../styles/globalStyle';
 import SignupForm from '../components/SignupForm';
+import Slider from '../components/Slider';
 function Signup() {
   return (
     <BContainer>
@@ -8,7 +9,9 @@ function Signup() {
         <Flex width="20%" flow="column" align="flex-start" mobileVertical>
           <SignupForm />
         </Flex>
-        <Flex width="50%" mobileHidden></Flex>
+        <Flex width="50%" mobileHidden>
+          <Slider />
+        </Flex>
       </Flex>
     </BContainer>
   );

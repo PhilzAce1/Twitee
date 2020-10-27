@@ -7,20 +7,34 @@ import img6 from '../assets/images/6.png';
 
 export default function Slide() {
   return (
-    <Carousel autoplay dots={false}>
-      <div>
-        <img src={img2} alt="illustration" />
-      </div>
+    <div
+      style={{
+        height: '100%',
+        width: '100%',
+      }}
+    >
+      <Carousel
+        autoplay
+        dots={false}
+        style={{
+          marginTop: '30%',
+          marginLeft: '20%',
+        }}
+      >
+        <div>
+          <img src={img2} alt="illustration" />
+        </div>
 
-      <div>
-        <img src={img4} alt="illustration" />
-      </div>
-      <div>
-        <img src={img5} alt="illustration" />
-      </div>
-      <div>
-        <img src={img6} alt="illustration" />
-      </div>
-    </Carousel>
+        <div>
+          <img src={img4} alt="illustration" />
+        </div>
+        <div>
+          <img src={img5} alt="illustration" />
+        </div>
+        <div>
+          <img src={img6} alt="illustration" />
+        </div>
+      </Carousel>
+    </div>
   );
 }
