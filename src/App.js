@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'antd/dist/antd.css';
+
+import { Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Posts from './pages/Posts';
+import { GlobalProvider } from './context/globalContext';
+import Header from './components/Header';
+import AuthRoute from './hoc/AuthRoute';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={AuthRoute(Home, false)} />
+        <Route exact path="/login" component={AuthRoute(Login, false)} />
+        <Route exact path="/signup" component={AuthRoute(Signup, false)} />
+        <Route exact path="/posts" component={AuthRoute(Posts, true)} />
+      </Switch>
+    </GlobalProvider>
   );
 }
 
