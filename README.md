@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to Twitee 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/philzace1" target="_blank">
+    <img alt="Twitter: philzace1" src="https://img.shields.io/twitter/follow/philzace1.svg?style=social" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> TWITEE is a mini and substandard runoff of Twitter. Users register and login and can put up
 
 ## Available Scripts
 

@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/login" component={AuthRoute(Login, false)} />
         <Route exact path="/signup" component={AuthRoute(Signup, false)} />
         <Route exact path="/posts" component={AuthRoute(Posts, true)} />
+        <Route path="*" component={AuthRoute(Home, false)} />
       </Switch>
     </GlobalProvider>
   );

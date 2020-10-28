@@ -27,8 +27,8 @@ function Home() {
         <Flex width="20%" flow="column" align="flex-start" mobileVertical>
           <Header>Twetee</Header>
           <P>
-            A software application similar to Twitter to conncet with friends
-            and Famitly
+            TWITEE is a mini and substandard runoff of Twitter, to connect with
+            family and friends
           </P>
           <div
             style={{

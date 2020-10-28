@@ -9,15 +9,16 @@ import {
 import axios from 'axios';
 import { Card } from 'antd';
 export default function Posts() {
-  const stuff = useContext(GlobalStateContext);
+  const globalState = useContext(GlobalStateContext);
   const dispatch = useGlobalDispatchContext();
   const { posts } = useGlobalStateContext();
   const [resPost, setResPost] = useState(posts);
   const [loading, setLoading] = useState(true);
+  const resPostCond = resPost <= 0 ? true : false;
   useEffect(() => {
     setResPost([...posts]);
-
-    if (stuff.posts.length <= 0) {
+    setLoading(resPostCond);
+    if (globalState.posts.length <= 0) {
       axios
         .get('https://twitee-be.herokuapp.com/post/')
         .then((res) => {
@@ -34,7 +35,7 @@ export default function Posts() {
     }
 
     // eslint-disable-next-line
-  }, [dispatch, stuff]);
+  }, [dispatch, globalState]);
   const postCardList = resPost.map((data, i) => (
     <PostCard data={data} key={i} />
   ));
